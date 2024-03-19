@@ -1,4 +1,4 @@
-# Install script for directory: /Users/pashaaliabadi/Desktop/cpp/testGL
+# Install script for directory: /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,17 +39,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/pashaaliabadi/Desktop/cpp/testGL/bin/include/glm/cmake_install.cmake")
+  include("/Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/include/glm/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/pashaaliabadi/Desktop/cpp/testGL/bin/include/glad/cmake_install.cmake")
+  include("/Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/include/glad/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/pashaaliabadi/Desktop/cpp/testGL/bin/src/cmake_install.cmake")
+  include("/Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/src/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -60,5 +60,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/pashaaliabadi/Desktop/cpp/testGL/bin/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

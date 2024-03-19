@@ -7,13 +7,13 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/Users/pashaaliabadi/Desktop/cpp/testGL/CMakeLists.txt"
+  "/Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/CMakeLists.txt"
   "CMakeFiles/3.28.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.28.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.28.1/CMakeSystem.cmake"
-  "/Users/pashaaliabadi/Desktop/cpp/testGL/include/glad/CMakeLists.txt"
-  "/Users/pashaaliabadi/Desktop/cpp/testGL/include/glm/CMakeLists.txt"
-  "/Users/pashaaliabadi/Desktop/cpp/testGL/src/CMakeLists.txt"
+  "/Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/include/glad/CMakeLists.txt"
+  "/Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/include/glm/CMakeLists.txt"
+  "/Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/src/CMakeLists.txt"
   "/opt/homebrew/Cellar/cmake/3.28.1/share/cmake/Modules/CMakeCInformation.cmake"
   "/opt/homebrew/Cellar/cmake/3.28.1/share/cmake/Modules/CMakeCXXInformation.cmake"
   "/opt/homebrew/Cellar/cmake/3.28.1/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"

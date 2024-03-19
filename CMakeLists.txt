@@ -19,4 +19,9 @@ add_subdirectory(src)
 
 target_link_libraries(MainExec utils glfw glad glm /opt/homebrew/Cellar/assimp/5.3.1/lib/libassimp.dylib)
 
-target_include_directories(MainExec PUBLIC ${PROJECT_SOURCE_DIR}/include "${PROJECT_SOURCE_DIR}" "${PROJECT_SOURCE_DIR}include/stb" "${PROJECT_SOURCE_DIR}/src/utils" "${PROJECT_SOURCE_DIR}/assimp")
+target_include_directories(MainExec PUBLIC 
+	${PROJECT_SOURCE_DIR}/include 
+	"${PROJECT_SOURCE_DIR}" 
+	"${PROJECT_SOURCE_DIR}include/stb" 
+	"${PROJECT_SOURCE_DIR}/src/utils"
+	"${PROJECT_SOURCE_DIR}/assimp")

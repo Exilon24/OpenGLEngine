@@ -1,2 +1,2 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libutils.a CMakeFiles/utils.dir/utils/window.cpp.o CMakeFiles/utils.dir/utils/gameobject.cpp.o CMakeFiles/utils.dir/utils/shader.cpp.o CMakeFiles/utils.dir/utils/Camera.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libutils.a CMakeFiles/utils.dir/utils/window.cpp.o CMakeFiles/utils.dir/utils/gameobject.cpp.o CMakeFiles/utils.dir/utils/shader.cpp.o CMakeFiles/utils.dir/utils/Camera.cpp.o CMakeFiles/utils.dir/utils/model.cpp.o
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libutils.a

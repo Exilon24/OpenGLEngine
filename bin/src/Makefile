@@ -57,10 +57,10 @@ RM = /opt/homebrew/Cellar/cmake/3.28.1/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/pashaaliabadi/Desktop/cpp/testGL
+CMAKE_SOURCE_DIR = /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/pashaaliabadi/Desktop/cpp/testGL/bin
+CMAKE_BINARY_DIR = /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(CMAKE_COMMAND) -E cmake_progress_start /Users/pashaaliabadi/Desktop/cpp/testGL/bin/CMakeFiles /Users/pashaaliabadi/Desktop/cpp/testGL/bin/src//CMakeFiles/progress.marks
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/pashaaliabadi/Desktop/cpp/testGL/bin/CMakeFiles 0
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(CMAKE_COMMAND) -E cmake_progress_start /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/CMakeFiles /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/src//CMakeFiles/progress.marks
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/utils.dir/rule:
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/utils.dir/rule
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/utils.dir/rule
 .PHONY : src/CMakeFiles/utils.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ utils: src/CMakeFiles/utils.dir/rule
 
 # fast build rule for target.
 utils/fast:
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/build
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/build
 .PHONY : utils/fast
 
 utils/Camera.o: utils/Camera.cpp.o
@@ -135,7 +135,7 @@ utils/Camera.o: utils/Camera.cpp.o
 
 # target to build an object file
 utils/Camera.cpp.o:
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/Camera.cpp.o
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/Camera.cpp.o
 .PHONY : utils/Camera.cpp.o
 
 utils/Camera.i: utils/Camera.cpp.i
@@ -143,7 +143,7 @@ utils/Camera.i: utils/Camera.cpp.i
 
 # target to preprocess a source file
 utils/Camera.cpp.i:
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/Camera.cpp.i
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/Camera.cpp.i
 .PHONY : utils/Camera.cpp.i
 
 utils/Camera.s: utils/Camera.cpp.s
@@ -151,7 +151,7 @@ utils/Camera.s: utils/Camera.cpp.s
 
 # target to generate assembly for a file
 utils/Camera.cpp.s:
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/Camera.cpp.s
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/Camera.cpp.s
 .PHONY : utils/Camera.cpp.s
 
 utils/gameobject.o: utils/gameobject.cpp.o
@@ -159,7 +159,7 @@ utils/gameobject.o: utils/gameobject.cpp.o
 
 # target to build an object file
 utils/gameobject.cpp.o:
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/gameobject.cpp.o
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/gameobject.cpp.o
 .PHONY : utils/gameobject.cpp.o
 
 utils/gameobject.i: utils/gameobject.cpp.i
@@ -167,7 +167,7 @@ utils/gameobject.i: utils/gameobject.cpp.i
 
 # target to preprocess a source file
 utils/gameobject.cpp.i:
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/gameobject.cpp.i
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/gameobject.cpp.i
 .PHONY : utils/gameobject.cpp.i
 
 utils/gameobject.s: utils/gameobject.cpp.s
@@ -175,15 +175,39 @@ utils/gameobject.s: utils/gameobject.cpp.s
 
 # target to generate assembly for a file
 utils/gameobject.cpp.s:
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/gameobject.cpp.s
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/gameobject.cpp.s
 .PHONY : utils/gameobject.cpp.s
+
+utils/model.o: utils/model.cpp.o
+.PHONY : utils/model.o
+
+# target to build an object file
+utils/model.cpp.o:
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/model.cpp.o
+.PHONY : utils/model.cpp.o
+
+utils/model.i: utils/model.cpp.i
+.PHONY : utils/model.i
+
+# target to preprocess a source file
+utils/model.cpp.i:
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/model.cpp.i
+.PHONY : utils/model.cpp.i
+
+utils/model.s: utils/model.cpp.s
+.PHONY : utils/model.s
+
+# target to generate assembly for a file
+utils/model.cpp.s:
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/model.cpp.s
+.PHONY : utils/model.cpp.s
 
 utils/shader.o: utils/shader.cpp.o
 .PHONY : utils/shader.o
 
 # target to build an object file
 utils/shader.cpp.o:
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/shader.cpp.o
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/shader.cpp.o
 .PHONY : utils/shader.cpp.o
 
 utils/shader.i: utils/shader.cpp.i
@@ -191,7 +215,7 @@ utils/shader.i: utils/shader.cpp.i
 
 # target to preprocess a source file
 utils/shader.cpp.i:
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/shader.cpp.i
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/shader.cpp.i
 .PHONY : utils/shader.cpp.i
 
 utils/shader.s: utils/shader.cpp.s
@@ -199,7 +223,7 @@ utils/shader.s: utils/shader.cpp.s
 
 # target to generate assembly for a file
 utils/shader.cpp.s:
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/shader.cpp.s
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/shader.cpp.s
 .PHONY : utils/shader.cpp.s
 
 utils/window.o: utils/window.cpp.o
@@ -207,7 +231,7 @@ utils/window.o: utils/window.cpp.o
 
 # target to build an object file
 utils/window.cpp.o:
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/window.cpp.o
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/window.cpp.o
 .PHONY : utils/window.cpp.o
 
 utils/window.i: utils/window.cpp.i
@@ -215,7 +239,7 @@ utils/window.i: utils/window.cpp.i
 
 # target to preprocess a source file
 utils/window.cpp.i:
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/window.cpp.i
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/window.cpp.i
 .PHONY : utils/window.cpp.i
 
 utils/window.s: utils/window.cpp.s
@@ -223,7 +247,7 @@ utils/window.s: utils/window.cpp.s
 
 # target to generate assembly for a file
 utils/window.cpp.s:
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/window.cpp.s
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/window.cpp.s
 .PHONY : utils/window.cpp.s
 
 # Help Target
@@ -241,6 +265,9 @@ help:
 	@echo "... utils/gameobject.o"
 	@echo "... utils/gameobject.i"
 	@echo "... utils/gameobject.s"
+	@echo "... utils/model.o"
+	@echo "... utils/model.i"
+	@echo "... utils/model.s"
 	@echo "... utils/shader.o"
 	@echo "... utils/shader.i"
 	@echo "... utils/shader.s"
@@ -258,6 +285,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

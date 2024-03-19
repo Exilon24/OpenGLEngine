@@ -1,4 +1,4 @@
-# Install script for directory: /Users/pashaaliabadi/Desktop/cpp/testGL/include/glm
+# Install script for directory: /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/include/glm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

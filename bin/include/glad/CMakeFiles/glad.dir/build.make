@@ -53,10 +53,10 @@ RM = /opt/homebrew/Cellar/cmake/3.28.1/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/pashaaliabadi/Desktop/cpp/testGL
+CMAKE_SOURCE_DIR = /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/pashaaliabadi/Desktop/cpp/testGL/bin
+CMAKE_BINARY_DIR = /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin
 
 # Include any dependencies generated for this target.
 include include/glad/CMakeFiles/glad.dir/depend.make
@@ -70,18 +70,18 @@ include include/glad/CMakeFiles/glad.dir/progress.make
 include include/glad/CMakeFiles/glad.dir/flags.make
 
 include/glad/CMakeFiles/glad.dir/glad.c.o: include/glad/CMakeFiles/glad.dir/flags.make
-include/glad/CMakeFiles/glad.dir/glad.c.o: /Users/pashaaliabadi/Desktop/cpp/testGL/include/glad/glad.c
+include/glad/CMakeFiles/glad.dir/glad.c.o: /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/include/glad/glad.c
 include/glad/CMakeFiles/glad.dir/glad.c.o: include/glad/CMakeFiles/glad.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/pashaaliabadi/Desktop/cpp/testGL/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object include/glad/CMakeFiles/glad.dir/glad.c.o"
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin/include/glad && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT include/glad/CMakeFiles/glad.dir/glad.c.o -MF CMakeFiles/glad.dir/glad.c.o.d -o CMakeFiles/glad.dir/glad.c.o -c /Users/pashaaliabadi/Desktop/cpp/testGL/include/glad/glad.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object include/glad/CMakeFiles/glad.dir/glad.c.o"
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/include/glad && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT include/glad/CMakeFiles/glad.dir/glad.c.o -MF CMakeFiles/glad.dir/glad.c.o.d -o CMakeFiles/glad.dir/glad.c.o -c /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/include/glad/glad.c
 
 include/glad/CMakeFiles/glad.dir/glad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/glad.dir/glad.c.i"
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin/include/glad && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/pashaaliabadi/Desktop/cpp/testGL/include/glad/glad.c > CMakeFiles/glad.dir/glad.c.i
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/include/glad && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/include/glad/glad.c > CMakeFiles/glad.dir/glad.c.i
 
 include/glad/CMakeFiles/glad.dir/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/glad.dir/glad.c.s"
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin/include/glad && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/pashaaliabadi/Desktop/cpp/testGL/include/glad/glad.c -o CMakeFiles/glad.dir/glad.c.s
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/include/glad && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/include/glad/glad.c -o CMakeFiles/glad.dir/glad.c.s
 
 # Object files for target glad
 glad_OBJECTS = \
@@ -93,19 +93,19 @@ glad_EXTERNAL_OBJECTS =
 include/glad/libglad.a: include/glad/CMakeFiles/glad.dir/glad.c.o
 include/glad/libglad.a: include/glad/CMakeFiles/glad.dir/build.make
 include/glad/libglad.a: include/glad/CMakeFiles/glad.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/pashaaliabadi/Desktop/cpp/testGL/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libglad.a"
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin/include/glad && $(CMAKE_COMMAND) -P CMakeFiles/glad.dir/cmake_clean_target.cmake
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin/include/glad && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/glad.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libglad.a"
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/include/glad && $(CMAKE_COMMAND) -P CMakeFiles/glad.dir/cmake_clean_target.cmake
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/include/glad && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/glad.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 include/glad/CMakeFiles/glad.dir/build: include/glad/libglad.a
 .PHONY : include/glad/CMakeFiles/glad.dir/build
 
 include/glad/CMakeFiles/glad.dir/clean:
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin/include/glad && $(CMAKE_COMMAND) -P CMakeFiles/glad.dir/cmake_clean.cmake
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/include/glad && $(CMAKE_COMMAND) -P CMakeFiles/glad.dir/cmake_clean.cmake
 .PHONY : include/glad/CMakeFiles/glad.dir/clean
 
 include/glad/CMakeFiles/glad.dir/depend:
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/pashaaliabadi/Desktop/cpp/testGL /Users/pashaaliabadi/Desktop/cpp/testGL/include/glad /Users/pashaaliabadi/Desktop/cpp/testGL/bin /Users/pashaaliabadi/Desktop/cpp/testGL/bin/include/glad /Users/pashaaliabadi/Desktop/cpp/testGL/bin/include/glad/CMakeFiles/glad.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/include/glad /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/include/glad /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/include/glad/CMakeFiles/glad.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : include/glad/CMakeFiles/glad.dir/depend
 

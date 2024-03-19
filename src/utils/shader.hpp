@@ -13,7 +13,9 @@ class Shader
 {
 public:
     unsigned int ID;
+	void CompileShader(const char* vertexPath, const char* fragmentPath);
     Shader(const char* vertexPath, const char* fragmentPath);
+	Shader();
 
     // activate the shader
     // ------------------------------------------------------------------------

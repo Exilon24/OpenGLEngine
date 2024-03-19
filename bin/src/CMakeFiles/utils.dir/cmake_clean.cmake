@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/utils.dir/utils/Camera.cpp.o.d"
   "CMakeFiles/utils.dir/utils/gameobject.cpp.o"
   "CMakeFiles/utils.dir/utils/gameobject.cpp.o.d"
+  "CMakeFiles/utils.dir/utils/model.cpp.o"
+  "CMakeFiles/utils.dir/utils/model.cpp.o.d"
   "CMakeFiles/utils.dir/utils/shader.cpp.o"
   "CMakeFiles/utils.dir/utils/shader.cpp.o.d"
   "CMakeFiles/utils.dir/utils/window.cpp.o"

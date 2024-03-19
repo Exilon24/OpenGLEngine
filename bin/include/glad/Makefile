@@ -57,10 +57,10 @@ RM = /opt/homebrew/Cellar/cmake/3.28.1/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/pashaaliabadi/Desktop/cpp/testGL
+CMAKE_SOURCE_DIR = /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/pashaaliabadi/Desktop/cpp/testGL/bin
+CMAKE_BINARY_DIR = /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(CMAKE_COMMAND) -E cmake_progress_start /Users/pashaaliabadi/Desktop/cpp/testGL/bin/CMakeFiles /Users/pashaaliabadi/Desktop/cpp/testGL/bin/include/glad//CMakeFiles/progress.marks
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/glad/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/pashaaliabadi/Desktop/cpp/testGL/bin/CMakeFiles 0
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(CMAKE_COMMAND) -E cmake_progress_start /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/CMakeFiles /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/include/glad//CMakeFiles/progress.marks
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/glad/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/glad/clean
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/glad/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/glad/preinstall
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/glad/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/glad/preinstall
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/glad/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 include/glad/CMakeFiles/glad.dir/rule:
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/glad/CMakeFiles/glad.dir/rule
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/glad/CMakeFiles/glad.dir/rule
 .PHONY : include/glad/CMakeFiles/glad.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ glad: include/glad/CMakeFiles/glad.dir/rule
 
 # fast build rule for target.
 glad/fast:
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(MAKE) $(MAKESILENT) -f include/glad/CMakeFiles/glad.dir/build.make include/glad/CMakeFiles/glad.dir/build
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f include/glad/CMakeFiles/glad.dir/build.make include/glad/CMakeFiles/glad.dir/build
 .PHONY : glad/fast
 
 glad.o: glad.c.o
@@ -135,7 +135,7 @@ glad.o: glad.c.o
 
 # target to build an object file
 glad.c.o:
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(MAKE) $(MAKESILENT) -f include/glad/CMakeFiles/glad.dir/build.make include/glad/CMakeFiles/glad.dir/glad.c.o
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f include/glad/CMakeFiles/glad.dir/build.make include/glad/CMakeFiles/glad.dir/glad.c.o
 .PHONY : glad.c.o
 
 glad.i: glad.c.i
@@ -143,7 +143,7 @@ glad.i: glad.c.i
 
 # target to preprocess a source file
 glad.c.i:
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(MAKE) $(MAKESILENT) -f include/glad/CMakeFiles/glad.dir/build.make include/glad/CMakeFiles/glad.dir/glad.c.i
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f include/glad/CMakeFiles/glad.dir/build.make include/glad/CMakeFiles/glad.dir/glad.c.i
 .PHONY : glad.c.i
 
 glad.s: glad.c.s
@@ -151,7 +151,7 @@ glad.s: glad.c.s
 
 # target to generate assembly for a file
 glad.c.s:
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(MAKE) $(MAKESILENT) -f include/glad/CMakeFiles/glad.dir/build.make include/glad/CMakeFiles/glad.dir/glad.c.s
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f include/glad/CMakeFiles/glad.dir/build.make include/glad/CMakeFiles/glad.dir/glad.c.s
 .PHONY : glad.c.s
 
 # Help Target
@@ -177,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/pashaaliabadi/Desktop/cpp/testGL/bin && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

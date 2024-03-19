@@ -1,4 +1,4 @@
-# Install script for directory: /Users/pashaaliabadi/Desktop/cpp/testGL/include/glad
+# Install script for directory: /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/include/glad
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

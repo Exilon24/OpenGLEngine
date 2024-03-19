@@ -1,8 +1,6 @@
 #ifndef GAME_OBJECT
 #define GAME_OBJECT
-#include "glm/ext/matrix_float4x4.hpp"
-#include "glm/fwd.hpp"
-#include "window.hpp"
+
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
@@ -13,11 +11,12 @@
 #include <vector>
 
 #include <shader.hpp>
+#include <model.hpp>
 
 
 struct Transform {
     glm::vec3 position = glm::vec3(0.0f,0.0f,0.0f) ;
-    glm::vec3 size = glm::vec3(0.0f,0.0f,0.0f);
+    glm::vec3 size = glm::vec3(1.0f,1.0f,1.0f);
     glm::vec3 rotationEuler = glm::vec3(0.0f,0.0f,0.0f);
     glm::vec3 localUp = glm::vec3(0.0f,0.0f,0.0f);
     glm::vec3 localRight = glm::vec3(0.0f,0.0f,0.0f);
@@ -31,23 +30,19 @@ struct Transform {
 class GameObject
 {
 private:
-    // Replace vertices and indices with a mesh or serialize mesh into vertices and indices
-    GLuint vbo, vao, ebo;
-    std::vector<unsigned int> indices;
-    std::vector<float> vertices;
+	Model objModel;
 
-    std::vector<unsigned int> textures;
 public:
-
     Transform transform;
-    GameObject(Window container);
-    GameObject() = delete;
+
+    GameObject();
     ~GameObject();
     void Bind();
-    void BufferMeshData();
-    void Draw(Shader shader, glm::mat4 &view);
+	void BufferMeshData(const char* path);
+	void Draw(glm::mat4 &view);
 
     void SetIndices(std::vector<unsigned int> indices);
     void setVertices(std::vector<float> vertices);
+    void setShader(Shader& shader);
 };
 #endif // !GAME_OBJECT

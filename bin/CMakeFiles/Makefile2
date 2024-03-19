@@ -54,10 +54,10 @@ RM = /opt/homebrew/Cellar/cmake/3.28.1/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/pashaaliabadi/Desktop/cpp/testGL
+CMAKE_SOURCE_DIR = /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/pashaaliabadi/Desktop/cpp/testGL/bin
+CMAKE_BINARY_DIR = /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -135,14 +135,14 @@ CMakeFiles/MainExec.dir/all: include/glad/CMakeFiles/glad.dir/all
 CMakeFiles/MainExec.dir/all: src/CMakeFiles/utils.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MainExec.dir/build.make CMakeFiles/MainExec.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MainExec.dir/build.make CMakeFiles/MainExec.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/pashaaliabadi/Desktop/cpp/testGL/bin/CMakeFiles --progress-num=1,2 "Built target MainExec"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/CMakeFiles --progress-num=1,2 "Built target MainExec"
 .PHONY : CMakeFiles/MainExec.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/MainExec.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/pashaaliabadi/Desktop/cpp/testGL/bin/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MainExec.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/pashaaliabadi/Desktop/cpp/testGL/bin/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/CMakeFiles 0
 .PHONY : CMakeFiles/MainExec.dir/rule
 
 # Convenience name for target.
@@ -161,14 +161,14 @@ CMakeFiles/MainExec.dir/clean:
 include/glad/CMakeFiles/glad.dir/all:
 	$(MAKE) $(MAKESILENT) -f include/glad/CMakeFiles/glad.dir/build.make include/glad/CMakeFiles/glad.dir/depend
 	$(MAKE) $(MAKESILENT) -f include/glad/CMakeFiles/glad.dir/build.make include/glad/CMakeFiles/glad.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/pashaaliabadi/Desktop/cpp/testGL/bin/CMakeFiles --progress-num=3,4 "Built target glad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/CMakeFiles --progress-num=3,4 "Built target glad"
 .PHONY : include/glad/CMakeFiles/glad.dir/all
 
 # Build rule for subdir invocation for target.
 include/glad/CMakeFiles/glad.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/pashaaliabadi/Desktop/cpp/testGL/bin/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/glad/CMakeFiles/glad.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/pashaaliabadi/Desktop/cpp/testGL/bin/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/CMakeFiles 0
 .PHONY : include/glad/CMakeFiles/glad.dir/rule
 
 # Convenience name for target.
@@ -187,14 +187,14 @@ include/glad/CMakeFiles/glad.dir/clean:
 src/CMakeFiles/utils.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/pashaaliabadi/Desktop/cpp/testGL/bin/CMakeFiles --progress-num=5,6,7,8,9 "Built target utils"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/CMakeFiles --progress-num=5,6,7,8,9,10 "Built target utils"
 .PHONY : src/CMakeFiles/utils.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/utils.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/pashaaliabadi/Desktop/cpp/testGL/bin/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/utils.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/pashaaliabadi/Desktop/cpp/testGL/bin/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/CMakeFiles 0
 .PHONY : src/CMakeFiles/utils.dir/rule
 
 # Convenience name for target.

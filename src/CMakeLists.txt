@@ -2,7 +2,8 @@ add_library(utils
 	${CMAKE_CURRENT_SOURCE_DIR}/utils/window.cpp 
 	${CMAKE_CURRENT_SOURCE_DIR}/utils/gameobject.cpp 
 	${CMAKE_CURRENT_SOURCE_DIR}/utils/shader.cpp
-	${CMAKE_CURRENT_SOURCE_DIR}/utils/Camera.cpp)
+	${CMAKE_CURRENT_SOURCE_DIR}/utils/Camera.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/utils/model.cpp)
 
 find_package(glfw3 3.3 REQUIRED)
 

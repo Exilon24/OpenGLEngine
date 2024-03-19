@@ -1,8 +1,9 @@
 #include <shader.hpp>
 // Credits to the good folks athttps://learnopengl.com/code_viewer_gh.php?code=includes/learnopengl/shader_m.h
- 
-    Shader::Shader(const char* vertexPath, const char* fragmentPath)
+
+    void Shader::CompileShader(const char* vertexPath, const char* fragmentPath)
     {
+
         // 1. retrieve the vertex/fragment source code from filePath
         std::string vertexCode;
         std::string fragmentCode;
@@ -54,8 +55,13 @@
         // delete the shaders as they're linked into our program now and no longer necessary
         glDeleteShader(vertex);
         glDeleteShader(fragment);
-
     }
+ 
+    Shader::Shader(const char* vertexPath, const char* fragmentPath)
+    {
+        CompileShader(vertexPath, fragmentPath);
+    }
+
     // activate the shader
     // ------------------------------------------------------------------------
     void Shader::use() const

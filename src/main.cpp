@@ -17,7 +17,7 @@ float currentFrame;
 float xoffset;
 float yoffset;
 
-float camDamp = 0.1;
+float camDamp = 0.2;
 
 float pitch, yaw;
 float lastX = static_cast<float>(screenWidth / 2), lastY = static_cast<float>( screenHeight/ 2);
@@ -27,50 +27,6 @@ bool fullscr = false;
 void processInput(GLFWwindow* window, Camera& cam);
 void viewportSizeChanged(GLFWwindow* window, int width, int height);
 void mouseUpdate(GLFWwindow* window, double xpos, double ypos);
-
-    std::vector<float> vertices = {
-        -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
-         0.5f, -0.5f, -0.5f,  1.0f, 0.0f,
-         0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-         0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-        -0.5f,  0.5f, -0.5f,  0.0f, 1.0f,
-        -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
-
-        -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-         0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
-         0.5f,  0.5f,  0.5f,  1.0f, 1.0f,
-         0.5f,  0.5f,  0.5f,  1.0f, 1.0f,
-        -0.5f,  0.5f,  0.5f,  0.0f, 1.0f,
-        -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-
-        -0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-        -0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-        -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-        -0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-
-         0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-         0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-         0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-         0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-         0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-         0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-
-        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-         0.5f, -0.5f, -0.5f,  1.0f, 1.0f,
-         0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
-         0.5f, -0.5f,  0.5f,  1.0f, 0.0f,
-        -0.5f, -0.5f,  0.5f,  0.0f, 0.0f,
-        -0.5f, -0.5f, -0.5f,  0.0f, 1.0f,
-
-        -0.5f,  0.5f, -0.5f,  0.0f, 1.0f,
-         0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-         0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-         0.5f,  0.5f,  0.5f,  1.0f, 0.0f,
-        -0.5f,  0.5f,  0.5f,  0.0f, 0.0f,
-        -0.5f,  0.5f, -0.5f,  0.0f, 1.0f
-    };
 
 int main (int argc, char *argv[]) {
 
@@ -100,14 +56,13 @@ int main (int argc, char *argv[]) {
     playerCamera.transform.position = glm::vec3(0, 0, 10);
     playerCamera.transform.localFront = glm::vec3(0,0,-1);
     playerCamera.cameraMode = FirstPerson;
-    playerCamera.dampening = 0.3;
+    playerCamera.dampening = camDamp;
 
     Shader myShader = Shader("../src/Shaders/vertex.glsl", "../src/Shaders/fragment.glsl");
     
     // End of boilerplate
-    GameObject myObject = GameObject(myWin);
-    myObject.setVertices(vertices);
-    myObject.BufferMeshData();
+    GameObject myObject = GameObject();
+    myObject.BufferMeshData("../assets/models/GuitarBag/guitarPack.fbx");
 
     glm::mat4 projection;
     glm::mat4 view;
@@ -136,7 +91,8 @@ int main (int argc, char *argv[]) {
 
         view = playerCamera.calculateView();
 
-        myObject.Draw(myShader, view);
+        myObject.Draw(view);
+
         processInput(myWin.getWindow(), playerCamera);
 
         glfwSwapBuffers(myWin.getWindow());
@@ -204,7 +160,7 @@ void mouseUpdate(GLFWwindow* window, double xpos, double ypos)
     lastX = xpos;
     lastY = ypos;
     
-    const float sensitivity = 15 * deltaTime;
+    const float sensitivity = 0.2;// * deltaTime;
     xoffset *= sensitivity;
     yoffset *= sensitivity;
 
@@ -215,6 +171,4 @@ void mouseUpdate(GLFWwindow* window, double xpos, double ypos)
         pitch = 89.0;
     else if (pitch < -89.0)
         pitch = -89.0;
-
-    std::cout << pitch << " " << yaw << "\n";
 }

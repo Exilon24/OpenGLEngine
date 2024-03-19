@@ -4,7 +4,7 @@
 # compile C with /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/pashaaliabadi/Desktop/cpp/testGL/include/glad/glad -I/Users/pashaaliabadi/Desktop/cpp/testGL/include/glad/glad/KHR
+C_INCLUDES = -I/Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/include/glad/glad -I/Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/include/glad/glad/KHR
 
 C_FLAGSarm64 = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk
 
