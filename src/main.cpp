@@ -61,8 +61,8 @@ int main (int argc, char *argv[]) {
     Shader myShader = Shader("../src/Shaders/vertex.glsl", "../src/Shaders/fragment.glsl");
     
     // End of boilerplate
-    GameObject myObject = GameObject();
-    myObject.BufferMeshData("../assets/models/GuitarBag/guitarPack.fbx");
+    GameObject myObject("../assets/models/TheCube/untitled.obj");
+    myObject.setShader(myShader);
 
     glm::mat4 projection;
     glm::mat4 view;
@@ -73,6 +73,7 @@ int main (int argc, char *argv[]) {
     
     glfwSetInputMode(myWin.getWindow(), GLFW_CURSOR, GLFW_CURSOR_DISABLED);  
 
+    std::cout << "Starting program loop...\n";
     while (!myWin.getWindowCloseState())
     {
 
@@ -83,9 +84,7 @@ int main (int argc, char *argv[]) {
         glClearColor(0.3f, 0.2f, 0.2f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
-        myObject.transform.rotationEuler += glm::vec3(0, 10 * deltaTime, 0);
-
-        const float radius = 10.0f;
+        //myObject.transform.rotationEuler += glm::vec3(0, 10 * deltaTime, 0);
 
         playerCamera.transform.rotationEuler = glm::vec3(yaw,pitch, 0);
 

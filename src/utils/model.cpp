@@ -1,7 +1,12 @@
-#include "assimp/material.h"
 #include "glad/glad.h"
+#include "glm/fwd.hpp"
 #include <iostream>
 #include <model.hpp>
+
+#define STB_IMAGE_IMPLEMENTATION
+#include <stb/stb_image.h>
+
+#include <enginemath.hpp>
 
 Mesh::Mesh(std::vector<Vertex> vertices, std::vector<GLuint> indices, std::vector<Texture> textures)
 {
@@ -19,18 +24,20 @@ void Mesh::initializeMesh()
     glGenBuffers(1, &this->ebo);
 
     glBindVertexArray(this->vao);
-    glBindBuffer(GL_ARRAY_BUFFER, vao);
-    glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(Vertex), &vertices[0], GL_STATIC_DRAW);
+    glBindBuffer(GL_ARRAY_BUFFER, this->vao);
+    glBufferData(GL_ARRAY_BUFFER, this->vertices.size() * sizeof(Vertex), &this->vertices[0], GL_STATIC_DRAW);
 
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, this->ebo);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(unsigned int), &indices[0], GL_STATIC_DRAW);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, this->indices.size() * sizeof(unsigned int), &this->indices[0], GL_STATIC_DRAW);
+
 
     glEnableVertexAttribArray(0);
-    glEnableVertexAttribArray(1);
-    glEnableVertexAttribArray(2);
-
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void *)0);
+
+    glEnableVertexAttribArray(1);
     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void *)offsetof(Vertex, Normal));
+
+    glEnableVertexAttribArray(2);
     glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), (void *)offsetof(Vertex, textureCoord));
 }
 
@@ -39,21 +46,19 @@ void Mesh::draw(Shader& shader)
     GLuint diffN{1};
     GLuint specN{1};
 
-    unsigned int count = 0;
-    for (Texture tex : this->textures)
+    for (unsigned int i = 0; i < this->textures.size(); i++)
     {
+        glActiveTexture(GL_TEXTURE0 + i);
         std::string number;
 
-        if (tex.name == "diffuse")
+        if (this->textures[i].name == "diffuse")
             number = std::to_string(diffN++);
-        else if (tex.name == "spec")
+        else if (this->textures[i].name == "spec")
             number = std::to_string(specN++);
         
-        shader.setInt((tex.name + number).c_str(), count);
-        count++;
+        glUniform1i(glGetUniformLocation(shader.ID, (this->textures[i].name + number).c_str()), i);
+        glBindTexture(GL_TEXTURE_2D, this->textures[i].glObject);
     }
-
-    glActiveTexture(GL_TEXTURE0);
 
     glBindVertexArray(this->vao);
     glDrawElements(GL_TRIANGLES, this->indices.size(), GL_UNSIGNED_INT, 0);
@@ -63,8 +68,8 @@ void Mesh::draw(Shader& shader)
 Model::Model(const char* path)
 {
     loadModel(path);    
-}
 
+}
 Model::Model(Mesh mesh)
 {
     this->meshVector.push_back(mesh);
@@ -75,17 +80,21 @@ void Model::setShader(Shader& shader)
     this->currentShader = shader;
 }
 
-void Model::draw()
+void Model::draw(glm::mat4& model, glm::mat4& view)
 {
     this->currentShader.use();
-    for (Mesh i : this->meshVector)
+    this->currentShader.setMat4("model", model);
+    this->currentShader.setMat4("view", view);
+
+    for (unsigned int i; i < this->meshVector.size(); i++)
     {
-        i.draw(this->currentShader);
+        this->meshVector[i].draw(this->currentShader);
     }
 }
 
 bool Model::loadModel(std::string path)
 {
+    std::cout << "Loading model at " << path << "\n";
     Assimp::Importer import;
     const aiScene* scene = import.ReadFile(path, aiProcess_Triangulate | aiProcess_FlipUVs | aiProcess_GenNormals);
 
@@ -98,13 +107,13 @@ bool Model::loadModel(std::string path)
     this->dir = path.substr(0, path.find_last_of('/'));
     processNode(scene->mRootNode, scene);
     return 0;
+    std::cout << "Loaded model!\n";
 }
 void Model::processNode(aiNode *node, const aiScene *scene)
 {
     for (unsigned int i = 0; i < scene->mNumMeshes; i++)
     {
-        aiMesh* mesh = scene->mMeshes[i];
-        this->meshVector.push_back(processMesh(mesh, scene));
+        this->meshVector.push_back(processMesh(scene->mMeshes[i], scene));
     }
 
     for (unsigned int i = 0; i < node->mNumChildren; i++)
@@ -193,10 +202,12 @@ Mesh Model::processMesh(aiMesh *mesh, const aiScene *scene)
     return Mesh(vertices, indices, textures);
 }
 
-unsigned int loadTextureImage(const char* path, const std::string directory)
+unsigned int Model::loadTextureImage(const char* path, const std::string directory)
 {
     std::string filename = std::string(path);
     filename = directory + '/' + path;
+
+    std::cout << "Loading texture at: " << filename << "\n";
 
     GLuint texture;
     glGenTextures(1, &texture);

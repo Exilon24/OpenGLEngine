@@ -30,16 +30,16 @@ struct Transform {
 class GameObject
 {
 private:
-	Model objModel;
+    Model objModel;
 
 public:
+    GameObject(const char* path);
+
     Transform transform;
 
-    GameObject();
-    ~GameObject();
     void Bind();
-	void BufferMeshData(const char* path);
-	void Draw(glm::mat4 &view);
+    void BufferMeshData(const char* path);
+    void Draw(glm::mat4 &view);
 
     void SetIndices(std::vector<unsigned int> indices);
     void setVertices(std::vector<float> vertices);

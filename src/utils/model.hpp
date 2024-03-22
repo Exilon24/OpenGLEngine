@@ -2,26 +2,26 @@
 #define GAME_OBJECT_ENGINE
 
 #include "glad/glad.h"
-#include "glm/ext/vector_float3.hpp"
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
-#include <stb_image.h>
+
 #include <string>
 #include <vector>
+
 #include <assimp/Importer.hpp>
 #include <assimp/scene.h>
 #include <assimp/postprocess.h>
 
-#include <enginemath.hpp>
 #include <shader.hpp>
+
 
 struct Vertex{
 	glm::vec3 Position;
 	glm::vec3 Normal;
 	glm::vec2 textureCoord;
-	Vertex();
+	Vertex() = default;
 	Vertex(const glm::vec3& vector);
 };
 
@@ -49,10 +49,10 @@ class Mesh{
 
 class Model{
 public:
-	Model() = delete;
+	Model() = default;
 	Model(const char* path);
 	Model(Mesh mesh);
-	void draw();
+	void draw(glm::mat4& model, glm::mat4& view);
 	void setShader(Shader& shader);
 	
 private:

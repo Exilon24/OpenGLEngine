@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/src/utils/Camera.cpp" "src/CMakeFiles/utils.dir/utils/Camera.cpp.o" "gcc" "src/CMakeFiles/utils.dir/utils/Camera.cpp.o.d"
+  "/Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/src/utils/enginemath.cpp" "src/CMakeFiles/utils.dir/utils/enginemath.cpp.o" "gcc" "src/CMakeFiles/utils.dir/utils/enginemath.cpp.o.d"
   "/Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/src/utils/gameobject.cpp" "src/CMakeFiles/utils.dir/utils/gameobject.cpp.o" "gcc" "src/CMakeFiles/utils.dir/utils/gameobject.cpp.o.d"
   "/Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/src/utils/model.cpp" "src/CMakeFiles/utils.dir/utils/model.cpp.o" "gcc" "src/CMakeFiles/utils.dir/utils/model.cpp.o.d"
   "/Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/src/utils/shader.cpp" "src/CMakeFiles/utils.dir/utils/shader.cpp.o" "gcc" "src/CMakeFiles/utils.dir/utils/shader.cpp.o.d"

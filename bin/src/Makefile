@@ -154,6 +154,30 @@ utils/Camera.cpp.s:
 	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/Camera.cpp.s
 .PHONY : utils/Camera.cpp.s
 
+utils/enginemath.o: utils/enginemath.cpp.o
+.PHONY : utils/enginemath.o
+
+# target to build an object file
+utils/enginemath.cpp.o:
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/enginemath.cpp.o
+.PHONY : utils/enginemath.cpp.o
+
+utils/enginemath.i: utils/enginemath.cpp.i
+.PHONY : utils/enginemath.i
+
+# target to preprocess a source file
+utils/enginemath.cpp.i:
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/enginemath.cpp.i
+.PHONY : utils/enginemath.cpp.i
+
+utils/enginemath.s: utils/enginemath.cpp.s
+.PHONY : utils/enginemath.s
+
+# target to generate assembly for a file
+utils/enginemath.cpp.s:
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/utils.dir/build.make src/CMakeFiles/utils.dir/utils/enginemath.cpp.s
+.PHONY : utils/enginemath.cpp.s
+
 utils/gameobject.o: utils/gameobject.cpp.o
 .PHONY : utils/gameobject.o
 
@@ -262,6 +286,9 @@ help:
 	@echo "... utils/Camera.o"
 	@echo "... utils/Camera.i"
 	@echo "... utils/Camera.s"
+	@echo "... utils/enginemath.o"
+	@echo "... utils/enginemath.i"
+	@echo "... utils/enginemath.s"
 	@echo "... utils/gameobject.o"
 	@echo "... utils/gameobject.i"
 	@echo "... utils/gameobject.s"

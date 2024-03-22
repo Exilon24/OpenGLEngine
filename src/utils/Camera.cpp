@@ -1,5 +1,4 @@
 #include <Camera.hpp>
-#include <cmath>
 #include <enginemath.hpp>
 
 constexpr glm::vec3 up(0,1,0);

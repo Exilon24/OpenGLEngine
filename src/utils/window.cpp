@@ -1,5 +1,4 @@
 #include "window.hpp"
-#include "glad/glad.h"
 
 Window::Window(int width, int height, const char* title, GLFWmonitor* monitor) : windowWidth(width), windowHeight(height), currentMonitor(monitor)
 {

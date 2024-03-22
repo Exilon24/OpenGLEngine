@@ -139,13 +139,28 @@ src/CMakeFiles/utils.dir/utils/model.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/utils.dir/utils/model.cpp.s"
 	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/src/utils/model.cpp -o CMakeFiles/utils.dir/utils/model.cpp.s
 
+src/CMakeFiles/utils.dir/utils/enginemath.cpp.o: src/CMakeFiles/utils.dir/flags.make
+src/CMakeFiles/utils.dir/utils/enginemath.cpp.o: /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/src/utils/enginemath.cpp
+src/CMakeFiles/utils.dir/utils/enginemath.cpp.o: src/CMakeFiles/utils.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/utils.dir/utils/enginemath.cpp.o"
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/utils.dir/utils/enginemath.cpp.o -MF CMakeFiles/utils.dir/utils/enginemath.cpp.o.d -o CMakeFiles/utils.dir/utils/enginemath.cpp.o -c /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/src/utils/enginemath.cpp
+
+src/CMakeFiles/utils.dir/utils/enginemath.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/utils.dir/utils/enginemath.cpp.i"
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/src/utils/enginemath.cpp > CMakeFiles/utils.dir/utils/enginemath.cpp.i
+
+src/CMakeFiles/utils.dir/utils/enginemath.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/utils.dir/utils/enginemath.cpp.s"
+	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/src/utils/enginemath.cpp -o CMakeFiles/utils.dir/utils/enginemath.cpp.s
+
 # Object files for target utils
 utils_OBJECTS = \
 "CMakeFiles/utils.dir/utils/window.cpp.o" \
 "CMakeFiles/utils.dir/utils/gameobject.cpp.o" \
 "CMakeFiles/utils.dir/utils/shader.cpp.o" \
 "CMakeFiles/utils.dir/utils/Camera.cpp.o" \
-"CMakeFiles/utils.dir/utils/model.cpp.o"
+"CMakeFiles/utils.dir/utils/model.cpp.o" \
+"CMakeFiles/utils.dir/utils/enginemath.cpp.o"
 
 # External object files for target utils
 utils_EXTERNAL_OBJECTS =
@@ -155,9 +170,10 @@ src/libutils.a: src/CMakeFiles/utils.dir/utils/gameobject.cpp.o
 src/libutils.a: src/CMakeFiles/utils.dir/utils/shader.cpp.o
 src/libutils.a: src/CMakeFiles/utils.dir/utils/Camera.cpp.o
 src/libutils.a: src/CMakeFiles/utils.dir/utils/model.cpp.o
+src/libutils.a: src/CMakeFiles/utils.dir/utils/enginemath.cpp.o
 src/libutils.a: src/CMakeFiles/utils.dir/build.make
 src/libutils.a: src/CMakeFiles/utils.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libutils.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libutils.a"
 	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/src && $(CMAKE_COMMAND) -P CMakeFiles/utils.dir/cmake_clean_target.cmake
 	cd /Users/pashaaliabadi/Desktop/cpp/OpenGLEngine/bin/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/utils.dir/link.txt --verbose=$(VERBOSE)
 

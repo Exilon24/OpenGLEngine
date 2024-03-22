@@ -1,7 +1,5 @@
 #include <gameobject.hpp>
 
-#define STB_IMAGE_IMPLEMENTATION
-// #include <stb/stb_image.h>
 
 void GameObject::Draw(glm::mat4 &view)
 {
@@ -15,12 +13,16 @@ void GameObject::Draw(glm::mat4 &view)
     model = glm::rotate(model, glm::radians(this->transform.rotationEuler.z), glm::vec3(0,0,1));
     model = glm::scale(model, this->transform.size);
     
-    this->objModel.draw();
+    this->objModel.draw(model, view);
+}
+
+GameObject::GameObject(const char* path)
+{
+    BufferMeshData(path);
 }
 
 void GameObject::BufferMeshData(const char* path)
 {
-    std::cout << "Buffering mesh data from: " << path << "\n";
     this->objModel = Model(path);
 }
 
